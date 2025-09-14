@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X Profile + Responsive AdSense Banner</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000; /* Full black background */
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* Top section (X Profile) */
+    .x-profile {
+      flex: 1;
+      overflow-y: auto; /* Scrollable feed */
+      padding-bottom: 120px; /* Space for sticky ad */
+      border-bottom: 2px solid #1DA1F2; /* Divider line */
+    }
+
+    /* Sticky Ad Banner */
+    .ad-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      border-top: 2px solid #1DA1F2;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 600px) {
+      .ad-banner {
+        padding: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 X Profile Section -->
+  <div class="x-profile">
+    <a class="twitter-timeline" 
+       href="https://x.com/YourAccount" <!-- Replace with your X account URL -->
+       data-height="100%">
+       Tweets by YourAccount
+    </a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+
+  <!-- 🔹 Sticky Responsive AdSense Banner Section -->
+  <div class="ad-banner">
+    <!-- Replace this with your real Google AdSense code -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXX" <!-- Replace with your AdSense client ID -->
+         data-ad-slot="YYYYYYYYYY"             <!-- Replace with your Ad slot ID -->
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+</body>
+    </html>
